@@ -35,6 +35,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         mHandler = new MyHandler(this);
 
         initView();
+        getSupportActionBar().hide();
         initListener();
         init();
 

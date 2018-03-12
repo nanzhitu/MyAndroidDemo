@@ -9,10 +9,13 @@ import com.example.neo.myapplication.base.BaseActivity;
 public class Activity0 extends BaseActivity {
 
     TextView textView;
+    TextView title;
     @Override
     protected void initView() {
         setContentView(R.layout.activity0);
         textView = (TextView) findViewById(R.id.text0);
+        title = findViewById(R.id.tv_title);
+
     }
 
     @Override
