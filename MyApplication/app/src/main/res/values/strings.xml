@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="enable_log_key">enable_log</string>
+    <string name="enable_log">开启log</string>
 </resources>

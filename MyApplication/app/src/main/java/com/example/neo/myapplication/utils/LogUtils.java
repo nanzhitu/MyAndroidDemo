@@ -2,27 +2,56 @@ package com.example.neo.myapplication.utils;
 
 import android.util.Log;
 
-
-
 /**
- * Created by Mocc on 2018/1/3
+ * Created by Neo on 2017/6/19.
+ *
  */
 
 public class LogUtils {
 
-    private static boolean LOGOUT = true;
-    private final static String TAG = LogUtils.class.getName() + ":";
+    //过滤登记  v<d<i<w<e
 
-    public static void d(String tag, String msg) {
-        if (LOGOUT) {
-            Log.d(TAG + tag, msg);
-        }
+    public static final int V = Log.VERBOSE;
+    public static final int D = Log.DEBUG;
+    public static final int I = Log.INFO;
+    public static final int W = Log.WARN;
+    public static final int E = Log.ERROR;
+
+    private static String  sGlobalTag         = "hehe";  // log 标签
+
+    private static int debugLevel = V;
+
+    public static void setDebugLevel(int level){
+        debugLevel = level;
     }
 
-    public static void e(String tag, String msg) {
-        if (LOGOUT) {
-            Log.e(TAG + tag, msg);
-        }
+    public static int getDebugLevel(){
+       return debugLevel;
     }
 
+    public static void v(String tag,String info){
+        if (debugLevel <= V){
+            Log.v(tag,"["+sGlobalTag+"]"+info);
+        }
+    }
+    public static void d(String tag,String info){
+        if (debugLevel <= D){
+            Log.d(tag,"["+sGlobalTag+"]"+info);
+        }
+    }
+    public static void i(String tag,String info){
+        if (debugLevel <= I){
+            Log.i(tag,"["+sGlobalTag+"]"+info);
+        }
+    }
+    public static void w(String tag,String info){
+        if (debugLevel <= W){
+            Log.w(tag,"["+sGlobalTag+"]"+info);
+        }
+    }
+    public static void e(String tag,String info){
+        if (debugLevel <= E){
+            Log.e(tag,"["+sGlobalTag+"]"+info);
+        }
+    }
 }
