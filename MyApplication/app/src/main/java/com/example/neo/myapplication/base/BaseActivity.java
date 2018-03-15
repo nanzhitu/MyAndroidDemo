@@ -98,6 +98,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         if (mHandler != null) {
             mHandler.weakReference.clear();
             mHandler.removeCallbacksAndMessages(null);
+            LogUtils.e(TAG, "removeCallbacksAndMessages");
         }
     }
 }
