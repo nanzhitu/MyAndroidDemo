@@ -12,7 +12,7 @@ import com.example.neo.myapplication.base.BaseActivity;
 
 public class ViewActivity extends BaseActivity implements View.OnClickListener {
 
-    Button mAnimatorBtn;
+    Button mAnimatorBtn,mButtonAllBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,11 +23,13 @@ public class ViewActivity extends BaseActivity implements View.OnClickListener {
     protected void initView() {
         setContentView(R.layout.activity_view);
         mAnimatorBtn = findViewById(R.id.animator);
+        mButtonAllBtn = findViewById(R.id.buttonall);
     }
 
     @Override
     protected void initListener() {
         mAnimatorBtn.setOnClickListener(this);
+        mButtonAllBtn.setOnClickListener(this);
     }
 
     @Override
@@ -41,6 +43,10 @@ public class ViewActivity extends BaseActivity implements View.OnClickListener {
             case R.id.animator:
                 Intent intent = new Intent(this, AnimatorActivity.class);
                 startActivity(intent);
+                break;
+            case R.id.buttonall:
+                Intent intent0 = new Intent(this, ButttonActivity.class);
+                startActivity(intent0);
                 break;
             default:
                 break;
