@@ -23,7 +23,7 @@ public final class PermissionUtils {
 
     public static void needPermission(Activity activity, int requestCode, String[] permissions){
         List<String> denyPermissions = findDeniedPermissions(activity,permissions);
-        if(denyPermissions != null){
+        if(denyPermissions.size() > 0){
             requestPermissions(activity,denyPermissions.toArray(new String[denyPermissions.size()]),requestCode);
         }
     }

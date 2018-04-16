@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.neo.myapplication">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -21,7 +23,9 @@
         <activity android:name=".activity.LoginActivity" />
         <activity android:name=".activity.ViewActivity" />
         <activity android:name=".activity.AnimatorActivity" />
-        <activity android:name=".activity.ButttonActivity"></activity>
+        <activity android:name=".activity.ButttonActivity" />
+        <activity android:name=".activity.UtilsActivity" />
+        <activity android:name=".activity.FilesActivity"></activity>
     </application>
 
 </manifest>

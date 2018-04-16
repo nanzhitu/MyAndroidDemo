@@ -8,11 +8,12 @@ import android.widget.Button;
 
 import com.example.neo.myapplication.activity.Activity0;
 import com.example.neo.myapplication.activity.LoginActivity;
+import com.example.neo.myapplication.activity.UtilsActivity;
 import com.example.neo.myapplication.activity.ViewActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button activity0,mvp,view;
+    Button activity0,mvp,view,utils;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         activity0 = findViewById(R.id.button);
         mvp = findViewById(R.id.mvp);
         view = findViewById(R.id.button2);
+        utils = findViewById(R.id.utils);
 
         activity0.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, Activity0.class);
@@ -31,12 +33,14 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ViewActivity.class);
-                startActivity(intent);
-            }
+        view.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, ViewActivity.class);
+            startActivity(intent);
+        });
+
+        utils.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this,UtilsActivity.class);
+            startActivity(intent);
         });
     }
 }
