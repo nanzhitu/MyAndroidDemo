@@ -8,16 +8,29 @@ import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
 import android.graphics.RectF;
+import android.os.Environment;
 
 import java.io.ByteArrayOutputStream;
 
 /**
- * Created by admin on 2018/4/12.
+ * Created by Neo on 2018/4/16.
  */
 
-public class DrawUtils {
+public final class ImageUtils {
 
-    public static synchronized Bitmap toRoundBitmap(Bitmap bitmap,float round) {
+    public static final String DCIM =
+            Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM).toString();
+    public static final String DIRECTORY = DCIM + "/Camera";
+    //public static final File DIRECTORY_FILE = new File(DIRECTORY);
+    public static final String JPEG_POSTFIX = ".jpg";
+    public static final String GIF_POSTFIX = ".gif";
+
+    public static boolean isJPGFile(String filename){
+        return filename.toLowerCase().endsWith(JPEG_POSTFIX);
+    }
+
+
+    public static synchronized Bitmap toRoundBitmap(Bitmap bitmap, float round) {
         int width = bitmap.getWidth();
         int height = bitmap.getHeight();
         float roundPx;

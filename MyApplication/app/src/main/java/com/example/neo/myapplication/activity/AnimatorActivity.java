@@ -5,11 +5,7 @@ import android.animation.AnimatorListenerAdapter;
 import android.animation.ArgbEvaluator;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
-import android.content.res.Resources;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Color;
-import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.view.View;
 
@@ -18,7 +14,6 @@ import android.widget.Button;
 import com.example.neo.myapplication.R;
 import com.example.neo.myapplication.base.BaseActivity;
 
-import com.example.neo.myapplication.utils.DrawUtils;
 import com.example.neo.myapplication.utils.constant.AnimatorConstants;
 
 public class AnimatorActivity extends BaseActivity implements View.OnClickListener {

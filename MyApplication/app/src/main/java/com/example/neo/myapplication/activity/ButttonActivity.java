@@ -1,17 +1,15 @@
 package com.example.neo.myapplication.activity;
 
-import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 import com.example.neo.myapplication.R;
 import com.example.neo.myapplication.base.BaseActivity;
-import com.example.neo.myapplication.utils.DrawUtils;
+import com.example.neo.myapplication.utils.ImageUtils;
 
 public class ButttonActivity extends BaseActivity implements View.OnClickListener {
 
@@ -28,7 +26,7 @@ public class ButttonActivity extends BaseActivity implements View.OnClickListene
         mRoundBtn = findViewById(R.id.round);
 
         Bitmap bitmap = BitmapFactory.decodeResource( getResources(), R.mipmap.picture);
-        mRoundBtn.setBackground(new BitmapDrawable(DrawUtils.toRoundBitmap(bitmap)));
+        mRoundBtn.setBackground(new BitmapDrawable(ImageUtils.toRoundBitmap(bitmap)));
     }
 
     @Override
