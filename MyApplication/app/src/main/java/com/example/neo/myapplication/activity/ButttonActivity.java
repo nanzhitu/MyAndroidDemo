@@ -10,6 +10,7 @@ import android.widget.ImageButton;
 import com.example.neo.myapplication.R;
 import com.example.neo.myapplication.base.BaseActivity;
 import com.example.neo.myapplication.utils.ImageUtils;
+import com.example.neo.myapplication.utils.ToastUtil;
 
 public class ButttonActivity extends BaseActivity implements View.OnClickListener {
 
@@ -31,7 +32,7 @@ public class ButttonActivity extends BaseActivity implements View.OnClickListene
 
     @Override
     protected void initListener() {
-
+        mRoundBtn.setOnClickListener(this);
     }
 
     @Override
@@ -41,6 +42,12 @@ public class ButttonActivity extends BaseActivity implements View.OnClickListene
 
     @Override
     public void onClick(View v) {
-
+        switch (v.getId()) {
+            case R.id.round:
+                ToastUtil.showLong("12345677654321");
+                break;
+            default:
+                break;
+        }
     }
 }
