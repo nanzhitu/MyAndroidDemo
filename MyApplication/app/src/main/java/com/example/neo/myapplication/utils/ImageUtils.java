@@ -63,9 +63,6 @@ public final class ImageUtils {
             roundPx = round;
         }
 
-        LogUtils.d("ygj"," width: "+width+" height: "+height+" roundPx: "+roundPx);
-        LogUtils.d("ygj"," left: "+left+" top: "+top+" right: "+right+" bottom: "+bottom);
-        LogUtils.d("ygj"," dst_left: "+dst_left+" dst_top: "+dst_top+" dst_right: "+dst_right+" dst_bottom: "+dst_bottom);
         Bitmap output = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(output);
 
@@ -85,12 +82,13 @@ public final class ImageUtils {
 
         paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));// 设置两张图片相交时的模式,参考http://trylovecatch.iteye.com/blog/1189452
         canvas.drawBitmap(bitmap, src, dst, paint); //以Mode.SRC_IN模式合并bitmap和已经draw了的Circle
-
+        /*
         ByteArrayOutputStream logoStream = new ByteArrayOutputStream();
         boolean res = output.compress(Bitmap.CompressFormat.PNG, 100, logoStream);
         byte[] logoBuf = logoStream.toByteArray();// 将图像保存到byte[]中
         Bitmap temp = BitmapFactory.decodeByteArray(logoBuf, 0, logoBuf.length);// 将图像从byte[]中读取生成Bitmap
-        return temp;
+        */
+        return output;
     }
 
     public static synchronized Bitmap toRoundBitmap(Bitmap bitmap) {
