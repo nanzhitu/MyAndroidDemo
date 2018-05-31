@@ -10,7 +10,7 @@ import com.example.neo.myapplication.base.BaseActivity;
 
 public class UtilsActivity extends BaseActivity implements View.OnClickListener {
 
-    Button mFileBtn;
+    Button mFileBtn,mOtherBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,11 +21,13 @@ public class UtilsActivity extends BaseActivity implements View.OnClickListener 
     protected void initView() {
         setContentView(R.layout.activity_utils);
         mFileBtn = findViewById(R.id.file);
+        mOtherBtn = findViewById(R.id.other);
     }
 
     @Override
     protected void initListener() {
         mFileBtn.setOnClickListener(this);
+        mOtherBtn.setOnClickListener(this);
     }
 
     @Override
@@ -39,6 +41,10 @@ public class UtilsActivity extends BaseActivity implements View.OnClickListener 
             case R.id.file:
                 Intent intent0 = new Intent(this, FilesActivity.class);
                 startActivity(intent0);
+                break;
+            case R.id.other:
+                Intent intent1 = new Intent(this, OtherUtilsActivity.class);
+                startActivity(intent1);
                 break;
             default:
                 break;

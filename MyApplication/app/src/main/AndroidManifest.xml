@@ -25,6 +25,7 @@
         <activity android:name=".activity.AnimatorActivity" />
         <activity android:name=".activity.ButttonActivity" />
         <activity android:name=".activity.UtilsActivity" />
+        <activity android:name=".activity.OtherUtilsActivity" />
         <activity android:name=".activity.FilesActivity"></activity>
     </application>
 
