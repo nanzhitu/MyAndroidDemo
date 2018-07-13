@@ -1,5 +1,8 @@
 package com.example.neo.myapplication.other.set;
 
+import android.content.Context;
+
+import com.example.neo.myapplication.test.ITest;
 import com.example.neo.myapplication.utils.LogUtils;
 
 import java.util.ArrayList;
@@ -12,7 +15,7 @@ import java.util.Set;
  * Created by Neo on 2018/7/13.
  */
 
-public class MySet extends ISet{
+public class MySet extends ITest {
 
     private static final String TAG = "MySet";
 
@@ -35,7 +38,12 @@ public class MySet extends ISet{
     }
 
     @Override
-    public void init(){
+    public void init(Context context){
+
+    }
+
+    @Override
+    public void init() {
         initSet();
     }
 

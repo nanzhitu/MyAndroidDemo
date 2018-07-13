@@ -1,5 +1,6 @@
 package com.example.neo.myapplication;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -25,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         utils = findViewById(R.id.utils);
         other = findViewById(R.id.button4);
 
-        initData();
+        initData(this);
 
         activity0.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, Activity0.class);
@@ -50,13 +51,13 @@ public class MainActivity extends AppCompatActivity {
         other.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MainSet.getInstance().test();
+                MainTest.getInstance().test();
             }
         });
 
     }
 
-    public void initData(){
-        MainSet.getInstance().init();
+    public void initData(Context context){
+        MainTest.getInstance().init(context);
     }
 }

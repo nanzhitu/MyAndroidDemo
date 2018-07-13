@@ -1,6 +1,8 @@
 package com.example.neo.myapplication.other.set;
 
-import com.example.neo.myapplication.utils.LogUtil;
+import android.content.Context;
+
+import com.example.neo.myapplication.test.ITest;
 import com.example.neo.myapplication.utils.LogUtils;
 
 import java.util.Collection;
@@ -13,7 +15,7 @@ import java.util.Set;
  * Created by Neo on 2018/7/13.
  */
 
-public class MyMap extends ISet{
+public class MyMap extends ITest {
 
     private static final String TAG = "MyMap";
 
@@ -35,9 +37,14 @@ public class MyMap extends ISet{
     }
 
     @Override
-    public void init(){
-        initMap();
+    public void init(Context context){
 
+
+    }
+
+    @Override
+    public void init() {
+        initMap();
     }
 
     @Override
