@@ -48,7 +48,7 @@ public class OtherUtilsActivity extends BaseActivity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        
+
 
 
         User user1 = GsonUtils.getInstance().getGson().fromJson(jtext, User.class);

@@ -331,7 +331,7 @@ public class SPUtils {
     /**
      * SP 中获取所有键值对
      *
-     * @return Map 对象
+     * @return MyMap 对象
      */
     public Map<String, ?> getAll() {
         return sp.getAll();

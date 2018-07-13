@@ -17,7 +17,7 @@ public class LogUtils {
     public static final int W = Log.WARN;
     public static final int E = Log.ERROR;
 
-    private static String  sGlobalTag         = "hehe";  // log 标签
+    private static String  sGlobalTag         = "ygj";  // log 标签
 
     private static int debugLevel = V;
 
