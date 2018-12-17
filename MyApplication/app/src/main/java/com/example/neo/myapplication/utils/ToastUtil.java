@@ -4,8 +4,6 @@ import android.content.Context;
 import android.os.Handler;
 import android.widget.Toast;
 
-import com.example.neo.myapplication.base.BaseApplication;
-
 
 /**
  * Created by Neo on 17/6/13.
@@ -17,11 +15,11 @@ public class ToastUtil {
     private static Toast sToast;
 
     public static void showShort(String message){
-        if(BaseApplication.getAppHandler() != null && BaseApplication.getAppContext() != null) {
+        if(Utils.getAppHandler() != null && Utils.getAppContext() != null) {
 
-            BaseApplication.getAppHandler().post(() -> {
+            Utils.getAppHandler().post(() -> {
                 if (sToast == null) {
-                    sToast = Toast.makeText(BaseApplication.getAppContext(), message, Toast.LENGTH_SHORT);
+                    sToast = Toast.makeText(Utils.getAppContext(), message, Toast.LENGTH_SHORT);
                 }
                 else{
                     sToast.setText(message);
@@ -32,11 +30,11 @@ public class ToastUtil {
     }
 
     public static void showLong(String message){
-        if(BaseApplication.getAppHandler() != null && BaseApplication.getAppContext() != null) {
+        if(Utils.getAppHandler() != null && Utils.getAppContext() != null) {
 
-            BaseApplication.getAppHandler().post(() -> {
+            Utils.getAppHandler().post(() -> {
                 if (sToast == null) {
-                    sToast = Toast.makeText(BaseApplication.getAppContext(), message, Toast.LENGTH_LONG);
+                    sToast = Toast.makeText(Utils.getAppContext(), message, Toast.LENGTH_LONG);
                 }
                 else{
                     sToast.setText(message);
