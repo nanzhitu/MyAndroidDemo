@@ -39,7 +39,7 @@ public class OtherUtilsActivity extends BaseActivity {
     @Override
     protected void init() {
         User user = new User("Neo","男",18);
-        String jtext = GsonUtils.getInstance().getGson().toJson(user);
+        String jtext = GsonUtils.toJson(user);
         mCls2Json.setText(jtext);
         String name = "";
         try {
@@ -51,7 +51,7 @@ public class OtherUtilsActivity extends BaseActivity {
 
 
 
-        User user1 = GsonUtils.getInstance().getGson().fromJson(jtext, User.class);
+        User user1 = GsonUtils.getObject(jtext, User.class);
         mJson2Cls.setText(user1.toString()+"\n"+"name = "+name);
     }
 
