@@ -1,6 +1,7 @@
 package com.example.neo.myapplication.activity;
 
 import android.content.Intent;
+import android.content.res.TypedArray;
 import android.os.Message;
 
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.widget.Button;
 
 import com.example.neo.myapplication.R;
 import com.example.neo.myapplication.base.BaseActivity;
+import com.example.neo.myapplication.utils.LogUtils;
 
 public class ViewActivity extends BaseActivity implements View.OnClickListener {
 
@@ -34,7 +36,9 @@ public class ViewActivity extends BaseActivity implements View.OnClickListener {
 
     @Override
     protected void init() {
-
+        TypedArray a = obtainStyledAttributes(null, R.styleable.CameraView, 0,
+                R.style.Widget_CameraView);
+        LogUtils.d(TAG,"aspectRatio =  "+a.getString(R.styleable.CameraView_aspectRatio));
     }
 
     @Override
