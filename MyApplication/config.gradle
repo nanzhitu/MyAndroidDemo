@@ -1,0 +1,51 @@
+ext {
+    plugins = [
+            library    : 'com.android.library',
+            application: 'com.android.application',
+            maven      : 'com.github.dcendents.android-maven',
+            bintray    : 'com.jfrog.bintray'
+    ]
+
+    android = [
+            applicationId    : "com.example.neo.myapplication",
+            compileSdkVersion: 26,
+            buildToolsVersion: "28.0.3",
+
+            minSdkVersion    : 21,
+            targetSdkVersion : 26,
+
+            versionCode      : 1,
+            versionName      : "1.0",
+    ]
+
+    bintray = [
+            version       : "2.1.3",
+
+            siteUrl       : 'https://github.com/nanzhitu/MyAndroidDemo',
+            gitUrl        : 'https://github.com/nanzhitu/MyAndroidDemo.git',
+
+            group         : "com.neo",
+
+            packaging     : 'aar',
+            name          : 'demo',
+            description   : 'demo for android',
+
+            licenseName   : 'The Apache Software License, Version 2.0',
+            licenseUrl    : 'http://www.apache.org/licenses/LICENSE-2.0.txt',
+
+            developerId   : 'neo',
+            developerName : 'neo',
+            developerEmail: 'yeguangjin2013@163.com',
+
+            binrayLibrary : "demo",
+            bintrayRepo   : "maven",
+            bintrayUser   : 'demo',
+            bintrayLicense: "Apache-2.0"
+    ]
+
+    dependencies = [
+
+            appCompat   : 'com.android.support:appcompat-v7:26.1.0',
+            constraint  : 'com.android.support.constraint:constraint-layout:1.0.2',
+    ]
+}
