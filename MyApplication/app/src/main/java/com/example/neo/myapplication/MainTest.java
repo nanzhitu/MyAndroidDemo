@@ -5,6 +5,7 @@ import android.content.Context;
 import com.example.neo.myapplication.other.set.MainSet;
 import com.example.neo.myapplication.test.ITest;
 import com.example.neo.myapplication.test.TestJobService;
+import com.example.neo.myapplication.test.TestSemaphore;
 import com.example.neo.myapplication.utils.LogUtils;
 
 /**
@@ -33,6 +34,7 @@ public class MainTest extends ITest {
     @Override
     public void init(Context context) {
         TestJobService.getInstance().init(context);
+        TestSemaphore.getInstance().init();
         MainSet.getInstance().init();
     }
 
@@ -45,6 +47,7 @@ public class MainTest extends ITest {
     public void test() {
         LogUtils.d(TAG," test");
         TestJobService.getInstance().test();
+        TestSemaphore.getInstance().test();
         MainSet.getInstance().test();
     }
 
