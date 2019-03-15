@@ -4,6 +4,7 @@ import android.content.Context;
 
 import com.example.neo.myapplication.other.set.MainSet;
 import com.example.neo.myapplication.test.ITest;
+import com.example.neo.myapplication.test.TestExecutors;
 import com.example.neo.myapplication.test.TestJobService;
 import com.example.neo.myapplication.test.TestSemaphore;
 import com.example.neo.myapplication.utils.LogUtils;
@@ -48,6 +49,7 @@ public class MainTest extends ITest {
         LogUtils.d(TAG," test");
         TestJobService.getInstance().test();
         TestSemaphore.getInstance().test();
+        new TestExecutors().test();
         MainSet.getInstance().test();
     }
 

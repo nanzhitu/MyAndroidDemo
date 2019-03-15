@@ -15,7 +15,7 @@ import java.util.Locale;
  *
  */
 
-public class LogUtil {
+public class MyLogUtil {
 
     private static final int V = Log.VERBOSE;
     private static final int D = Log.DEBUG;
@@ -47,7 +47,7 @@ public class LogUtil {
     private static final int    MAX_LEN        = 4000;
     private static final Format FORMAT         = new SimpleDateFormat("MM-dd HH:mm:ss.SSS ", Locale.getDefault());
 
-    private LogUtil() {
+    private MyLogUtil() {
         throw new UnsupportedOperationException("u can't instantiate me...");
     }
 
